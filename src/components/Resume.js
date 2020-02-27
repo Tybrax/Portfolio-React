@@ -1,6 +1,6 @@
 // IMPORT
 import React, { useState } from 'react';
-import { Accordion, Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { Accordion, Card, Button, Container, Row, Col, ProgressBar } from 'react-bootstrap';
 
 // VARIABLES
 const eduData = {
@@ -91,12 +91,12 @@ const It = (props) => {
 const Languages = (props) => {
     return (
         <div>
-            <h5 className="font-weight-bold" style={{color: '#00A651'}}>Computer Sciences</h5>
+            <h5 className="font-weight-bold" style={{color: '#00A651'}}>Languages</h5>
             <ul className="text-dark">
-                <li>{skills.languages[0]}</li>
-                <li>{skills.languages[1]}</li>
-                <li>{skills.languages[2]}</li>
-                <li>{skills.languages[3]}</li>
+                <li className="mt-2 mb-2"><ProgressBar variant='dark' now={100} label={'French'} /></li>
+                <li className="mt-2 mb-2"><ProgressBar variant='dark' now={90} label={'English (TOEIC 935/990)'} /></li>
+                <li className="mt-2 mb-2"><ProgressBar variant='dark' now={90} label={'Chinese (HSK5)'} /></li>
+                <li className="mt-2 mb-2"><ProgressBar variant='dark' now={40} label={'Spanish'} /></li>
             </ul>
         </div>
     );

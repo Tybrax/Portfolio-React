@@ -7,6 +7,7 @@ import { NavBar } from './components/NavBar.js';
 import { MainTitle } from './components/MainTitle.js';
 import { Description } from './components/Description.js';
 import { Resume } from './components/Resume.js';
+import { Footer } from './components/Footer.js';
 
 import logoWhite from './images/logo_w.png';
 import logoBlack from './images/logo_b.png';
@@ -28,6 +29,7 @@ function App() {
       <body>
         <Resume />
       </body>
+      <Footer />
     </div>
   );
 }
