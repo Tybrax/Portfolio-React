@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from './components/NavBar.js';
 import { MainTitle } from './components/MainTitle.js';
 import { Description } from './components/Description.js';
+import { Resume } from './components/Resume.js';
 
 import logoWhite from './images/logo_w.png';
 import logoBlack from './images/logo_b.png';
@@ -22,6 +23,9 @@ function App() {
         <MainTitle firstColor={darkGrey} />
         <Description logoBlack={logoBlack} quoteColor={lightBlue}/>
       </header>
+      <body>
+        <Resume />
+      </body>
     </div>
   );
 }

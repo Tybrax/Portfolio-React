@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const developerSkills = ['passion', 'communication', 'curiosity', 'rigor', 'creativity'];
-const colors = ['#00A651', '#5b8c5a', '#21bf73', '#52de97', '#ccda46'];
+const colors = ['#00A651', '#5B8C5A', '#21BF73', '#52DE97', '#CCDA46'];
 
 export class Description extends React.Component {
     constructor(props) {
@@ -42,6 +42,11 @@ export class Description extends React.Component {
             });
         } else if (this.state.skill === developerSkills[3]) {
             this.setState({
+                skill: developerSkills[4],
+                color: colors[4]
+            });
+        } else if (this.state.skill === developerSkills[4]) {
+            this.setState({
                 skill: developerSkills[0],
                 color: colors[0]
             });
@@ -79,3 +84,4 @@ export class Description extends React.Component {
         )
     }
 };
+
