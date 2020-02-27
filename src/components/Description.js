@@ -56,9 +56,9 @@ export class Description extends React.Component {
         return (
             <Container fluid className="border-top border-bottom border-black pt-3 pb-3">
                 <Row>
-                    <Col xs={12} sm={12} md={4} lg={4} xl={4}>
+                    <Col xs={12} sm={12} md={4} lg={4} xl={4} className="align-self-center">
                         <figure>
-                            <img src={this.props.gif} className="mx-auto d-block rounded-lg border border-black shadow-lg" width="200" height="200"/>
+                            <img src={this.props.gif} className="mx-auto d-block rounded-lg border border-black shadow-lg" width="140" height="140"/>
                         </figure>
                     </Col>
                     <Col xs={12} sm={12} md={8} lg={8} xl={8}>
