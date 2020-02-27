@@ -5,3 +5,7 @@
 .skills {
   letter-spacing: 2px;
 }
+
+.dropdown-btn {
+  text-decoration: none !important
+}

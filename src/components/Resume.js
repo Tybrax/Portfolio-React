@@ -27,7 +27,7 @@ const Experience = (props) => {
             <Accordion className="mt-3 mb-3">
                 <Card className="shadow-lg">
                     <Card.Header className="text-center">
-                        <Accordion.Toggle as={Button} variant="link" eventKey="0" className="stretched-link" onMouseOver={() => newColor('text-info')} onMouseOut={() => newColor('text-dark')}>
+                        <Accordion.Toggle as={Button} variant="link" eventKey="0" className="dropdown-btn stretched-link" onMouseOver={() => newColor('text-info')} onMouseOut={() => newColor('text-dark')}>
                             <h4 className={titleColor}>PROFESSIONAL EXPERIENCE</h4>
                         </Accordion.Toggle>
                     </Card.Header>
