@@ -60,12 +60,12 @@ export class Description extends React.Component {
                     <Col xs={12} sm={12} md={4} lg={4} xl={4}>
                         <figure>
                             <img src={this.props.logoBlack} className="mx-auto d-block" width="200" height="200"/>
-                            <figcaption className="text-center font-italic font-weight-bold" style={{color: this.props.quoteColor}}>Unleash the power of web programming</figcaption>
+                            <figcaption className="text-center font-italic font-weight-bold" style={{color: this.props.quoteColor}}>Unleash the power of <span style={{color: this.props.workColor}}>web programming</span></figcaption>
                         </figure>
                     </Col>
                     <Col xs={12} sm={12} md={8} lg={8} xl={8}>
                         <Card className="border rounded-lg shadow">
-                        <Card.Title className="mt-2 ml-2 pt-2 text-center">SEEKING FULL-TIME WEB DEVELOPER JOB</Card.Title>
+                        <Card.Title style={{color: this.props.headline}} className="mt-2 ml-2 pt-2 text-center font-weight-bold">SEEKING FULL-TIME WEB DEVELOPER JOB</Card.Title>
                             <Card.Body>
                                 <blockquote className="blockquote mb-0">
                                     <p>
