@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const developerSkills = ['passion', 'communication', 'curiosity', 'rigor', 'creativity'];
-const colors = ['#00A651', '#5B8C5A', '#21BF73', '#52DE97', '#CCDA46'];
 
 export class Description extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             skill: developerSkills[0],
-            color: colors[0]
+            color: '#00A651'
         };
     }
 
@@ -28,27 +27,27 @@ export class Description extends React.Component {
         if (this.state.skill === developerSkills[0]) {
             this.setState({
                 skill: developerSkills[1],
-                color: colors[1]
+                color: '#00A651'
             });
         } else if (this.state.skill === developerSkills[1]) {
             this.setState({
                 skill: developerSkills[2],
-                color: colors[2]
+                color: '#00A651'
             });
         } else if (this.state.skill === developerSkills[2]) {
             this.setState({
                 skill: developerSkills[3],
-                color: colors[3]
+                color: '#00A651'
             });
         } else if (this.state.skill === developerSkills[3]) {
             this.setState({
                 skill: developerSkills[4],
-                color: colors[4]
+                color: '#00A651'
             });
         } else if (this.state.skill === developerSkills[4]) {
             this.setState({
                 skill: developerSkills[0],
-                color: colors[0]
+                color: '#00A651'
             });
         }
     }
@@ -59,8 +58,7 @@ export class Description extends React.Component {
                 <Row>
                     <Col xs={12} sm={12} md={4} lg={4} xl={4}>
                         <figure>
-                            <img src={this.props.logoBlack} className="mx-auto d-block" width="200" height="200"/>
-                            <figcaption className="text-center font-italic font-weight-bold" style={{color: this.props.quoteColor}}>Unleash the power of <span style={{color: this.props.workColor}}>web programming</span></figcaption>
+                            <img src={this.props.gif} className="mx-auto d-block rounded-lg border border-black shadow-lg" width="200" height="200"/>
                         </figure>
                     </Col>
                     <Col xs={12} sm={12} md={8} lg={8} xl={8}>

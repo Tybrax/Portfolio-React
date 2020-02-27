@@ -10,6 +10,7 @@ import { Resume } from './components/Resume.js';
 
 import logoWhite from './images/logo_w.png';
 import logoBlack from './images/logo_b.png';
+import logoGif from './images/gifLogo.gif';
 
 const darkGrey = '#343A40';
 const darkGreen = '#00A651';
@@ -22,7 +23,7 @@ function App() {
       <header>
         <NavBar logo={logoWhite} />
         <MainTitle firstColor={darkGrey} />
-        <Description headline={lightBlue} logoBlack={logoBlack} quoteColor={darkGrey} workColor={lightGreen}/>
+        <Description headline={lightBlue} gif={logoGif} />
       </header>
       <body>
         <Resume />
