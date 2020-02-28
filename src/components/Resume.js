@@ -93,10 +93,11 @@ const Languages = (props) => {
         <div>
             <h5 className="font-weight-bold" style={{color: '#00A651'}}>Languages</h5>
             <ul className="text-dark">
-                <li className="mt-2 mb-2"><ProgressBar variant='dark' now={100} label={'French'} /></li>
-                <li className="mt-2 mb-2"><ProgressBar variant='dark' now={90} label={'English (TOEIC 935/990)'} /></li>
-                <li className="mt-2 mb-2"><ProgressBar variant='dark' now={90} label={'Chinese (HSK5)'} /></li>
-                <li className="mt-2 mb-2"><ProgressBar variant='dark' now={40} label={'Spanish'} /></li>
+
+                <li className="mt-2 mb-2">French<ProgressBar variant='dark' now={100} /></li>
+                <li className="mt-2 mb-2">English (TOEIC 935/990)<ProgressBar variant='dark' now={90} /></li>
+                <li className="mt-2 mb-2">Chinese (HSK5)<ProgressBar variant='dark' now={90} /></li>
+                <li className="mt-2 mb-2">Spanish<ProgressBar variant='dark' now={40} /></li>
             </ul>
         </div>
     );
@@ -167,11 +168,12 @@ const Experience = (props) => {
     const [titleColor, newColor] = useState('text-dark');
 
     return (
-        <Container>
-            <Accordion className="mt-3 mb-3">
-                <Card className="shadow-lg">
+        <Container className="mt-5">
+            <Accordion className="mt-5 mb-3">
+                <Card className="shadow-lg mt-5">
+                    <h3 className="text-center font-weight-bold" style={{color: '#00A651'}}>RESUME</h3>
                     <Card.Header className="text-center">
-                        <Accordion.Toggle as={Button} variant="link" eventKey="0" className="dropdown-btn stretched-link" onMouseOver={() => newColor('text-info')} onMouseOut={() => newColor('text-dark')}>
+                        <Accordion.Toggle as={Button} variant="link" eventKey="0" className="dropdown-btn stretched-link mt-3" onMouseOver={() => newColor('text-info')} onMouseOut={() => newColor('text-dark')}>
                             <h4 className={titleColor}>PROFESSIONAL EXPERIENCE</h4>
                         </Accordion.Toggle>
                     </Card.Header>
@@ -190,7 +192,7 @@ const Experience = (props) => {
 
 export const Resume = (props) => {
     return (
-        <div>
+        <div className="resume">
             <Experience />
             <Education />
             <Skills />

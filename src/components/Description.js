@@ -68,7 +68,7 @@ export class Description extends React.Component {
                                 <blockquote className="blockquote mb-0">
                                     <p>
                                         Curious and passionate full-stack developer interested in new challenges, I'm
-                                        currently looking for a position in Marseille, France.
+                                        currently looking for a junior position in Marseille, France.
                                     </p>
                                     <h4 className="skills text-center" style={{color: this.state.color}}>
                                         {this.state.skill.toUpperCase()}

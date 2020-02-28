@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 
 // Import images
 // Web development - Project 1
@@ -24,8 +24,9 @@ const projectsData = {
         pTwo: {
             img: [pTwoImgOne, pTwoImgTwo, pTwoImgThree],
             altImg: ['Main page', 'Article page', 'Register form'],
-            captionTitle: ['TBD', 'TBD', 'TBD'],
-            captionDescription: ['TBD', 'TBD', 'TBD']
+            name: "Analyze a client's needs for their film festival",
+            specs: "Make a HTML/CSS site and project brief as aesthetically pleasing as possible. Pay attention to detail, and communicate a sense of brand identity through font, color, image, and sizing choices. Creating this brand identity.",
+            skills: ["Write a project brief", "Choose an appropriate technical solution", "Detail project specifications", "List functionalities requested by the client"]
         }
     },
     data: {
@@ -40,12 +41,16 @@ const pOneSkills = projectsData.web.pOne.skills.map((skill) =>
     <li>{skill}</li>
 );
 
+const pTwoSkills = projectsData.web.pTwo.skills.map((skill) =>
+    <li>{skill}</li>
+);
+
 const WebProgramming = (props) => {
     return (
         <div>
             <Container>
-                <h5 style={{color: '#343A40'}} className="text-center font-weight-bold">WORDPRESS : <span style={{color: '#17A2b8'}}>CHALETS & CAVIAR</span></h5>
-                <Carousel className="slider d-block mx-auto">
+                <h5 style={{color: '#343A40'}} className="showcase-title text-center font-weight-bold pb-3">{props.projectName.toUpperCase()}</h5>
+                <Carousel className="slider d-block mx-auto" style={{backgroundColor: '#17A2b8'}}>
                     <Carousel.Item>
                         <img
                           src={props.srcOne}
@@ -69,32 +74,19 @@ const WebProgramming = (props) => {
                     </Carousel.Item>
                 </Carousel>
             </Container>
-            <Container fluid>
-                <h6 className="text-center font-weight-bold">{props.projectName}</h6>
+            <Container fluid className="pt-5 pb-5">
                 <Row>
                     <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <h6 className="text-center font-weight-bold" style={{color: '#00A651'}}>Project brief</h6>
-                        <p>{props.specs}</p>
+                        <h6 className="text-center font-weight-bold" style={{color: '#00A651'}}>PROJECT BRIEF</h6>
+                        <p className="text-justify">{props.specs}</p>
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <h6 className="text-center font-weight-bold" style={{color: '#00A651'}}>Technical skills</h6>
-                        <ul>{props.skills}</ul>
+                        <h6 className="text-center font-weight-bold" style={{color: '#00A651'}}>TECHNICAL SKILLS</h6>
+                        <ul className="font-italic">{props.skills}</ul>
                     </Col>
                 </Row>
             </Container>
         </div>
-    );
-};
-
-const DataSciences = (props) => {
-    return (
-        <Container>
-            <Row>
-                <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-                    Data Scraping
-                </Col>
-            </Row>
-        </Container>
     );
 };
 
@@ -114,6 +106,20 @@ export const Showcase = (props) => {
                 projectName={projectsData.web.pOne.name}
                 specs={projectsData.web.pOne.specs}
                 skills={pOneSkills}
+            />
+            <WebProgramming
+                srcOne={projectsData.web.pTwo.img[0]}
+                altOne={projectsData.web.pTwo.altImg[0]}
+
+                srcTwo={projectsData.web.pTwo.img[1]}
+                altTwo={projectsData.web.pTwo.altImg[1]}
+
+                srcThree={projectsData.web.pTwo.img[2]}
+                altThree={projectsData.web.pTwo.altImg[2]}
+
+                projectName={projectsData.web.pTwo.name}
+                specs={projectsData.web.pTwo.specs}
+                skills={pTwoSkills}
             />
         </Container>
 

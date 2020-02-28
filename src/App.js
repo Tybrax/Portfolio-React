@@ -1,38 +1,67 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav } from 'react-bootstrap';
 
-import { NavBar } from './components/NavBar.js';
-import { MainTitle } from './components/MainTitle.js';
-import { Description } from './components/Description.js';
+import { Contact } from './components/Contact.js';
+import { Header } from './components/Header.js';
 import { Resume } from './components/Resume.js';
 import { Footer } from './components/Footer.js';
 import { Showcase } from './components/Showcase.js'
 
 import logoWhite from './images/logo_w.png';
-import logoBlack from './images/logo_b.png';
-import logoGif from './images/gifLogo.gif';
-
-const darkGrey = '#343A40';
-const darkGreen = '#00A651';
-const lightBlue = '#17A2b8';
-const lightGreen = '#00A651';
 
 function App() {
+
+  const [colorOne] = useState('white');
+  const [colorTwo] = useState('white');
+  const [colorThree] = useState('white');
+  const [colorFour] = useState('white');
+
   return (
-    <div className="App">
-      <header>
-        <NavBar logo={logoWhite} />
-        <MainTitle firstColor={darkGrey} />
-        <Description headline={lightBlue} gif={logoGif} />
-      </header>
-      <body>
-        <Showcase />
-        <Resume />
-      </body>
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar bg="dark" variant="dark" fixed="top" className="nabvar">
+            <Navbar.Brand>
+                <img
+                    src={logoWhite}
+                    width="40"
+                    height="40"
+                    className="d-inline-block align-top"
+                    alt="Bastien Ratat Logo"
+                />
+            </Navbar.Brand>
+            <Nav className="mr-auto">
+                <Nav.Link><Link className="nav-link" style={{colorOne}} to="/">HOME</Link></Nav.Link>
+                <Nav.Link><Link className="nav-link" style={{colorTwo}} to="/projects">PROJECTS</Link></Nav.Link>
+                <Nav.Link><Link className="nav-link" style={{colorThree}} to="/resume">RESUME</Link></Nav.Link>
+                <Nav.Link><Link className="nav-link" style={{colorFour}} to="/contact">CONTACT</Link></Nav.Link>
+            </Nav>
+        </Navbar>
+        <Switch>
+          <Route exact path="/">
+            <Header />
+          </Route>
+          <Route path="/projects">
+            <Showcase />
+          </Route>
+          <Route path="/resume">
+            <Resume />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
