@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const developerSkills = ['passion', 'communication', 'curiosity', 'rigor', 'creativity'];
@@ -58,7 +58,7 @@ export class Description extends React.Component {
                 <Row>
                     <Col xs={12} sm={12} md={4} lg={4} xl={4} className="align-self-center">
                         <figure>
-                            <img src={this.props.gif} className="mx-auto d-block rounded-lg border border-black shadow-lg" width="140" height="140"/>
+                            <img src={this.props.gif} className="mx-auto d-block rounded-lg border border-black shadow-lg" width="140" height="140" alt="skills slider"/>
                         </figure>
                     </Col>
                     <Col xs={12} sm={12} md={8} lg={8} xl={8}>

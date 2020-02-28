@@ -8,6 +8,7 @@ import { MainTitle } from './components/MainTitle.js';
 import { Description } from './components/Description.js';
 import { Resume } from './components/Resume.js';
 import { Footer } from './components/Footer.js';
+import { Showcase } from './components/Showcase.js'
 
 import logoWhite from './images/logo_w.png';
 import logoBlack from './images/logo_b.png';
@@ -27,6 +28,7 @@ function App() {
         <Description headline={lightBlue} gif={logoGif} />
       </header>
       <body>
+        <Showcase />
         <Resume />
       </body>
       <Footer />
