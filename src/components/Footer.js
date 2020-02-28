@@ -13,15 +13,15 @@ export const Footer = (props) => {
     return (
         <Container fluid >
             <footer>
-                <Row>
-                    <Col className="align-self-center">
-                        <a href="https://github.com/Tybrax" target="_blank">
-                            <img src={githubLogo} width="150" className={classOne} onMouseOver={() => {newclassOne('center-block border border-dark rounded-circle')}} onMouseOut={() => {newclassOne('center-block')}} />
-                        </a>
+                <Row className="justify-content-center pb-3 pt-3">
+                    <Col className="align-self-center d-flex justify-content-center">
+                                <a href="https://github.com/Tybrax" target="_blank" className="footer-link">
+                                    <img src={githubLogo} width="130" className={classOne} onMouseOver={() => {newclassOne('center-block border-top border-dark rounded-circle')}} onMouseOut={() => {newclassOne('center-block')}} />
+                                </a>
                     </Col>
-                    <Col className="align-self-center">
+                    <Col className="align-self-center d-flex justify-content-center">
                         <a href="https://www.linkedin.com/in/bastien-ratat/" target="_blank">
-                            <img src={linkedinLogo} width="150" className={classTwo} onMouseOver={() => {newclassTwo('center-block border border-dark rounded-circle')}} onMouseOut={() => {newclassTwo('center-block')}} />
+                            <img src={linkedinLogo} width="130" className={classTwo} onMouseOver={() => {newclassTwo('center-block border-bottom border-dark rounded-circle')}} onMouseOut={() => {newclassTwo('center-block')}} />
                         </a>
                     </Col>
                 </Row>
