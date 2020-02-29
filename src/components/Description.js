@@ -54,7 +54,7 @@ export class Description extends React.Component {
 
     render() {
         return (
-            <Container fluid className="border-top border-bottom border-black pt-3 pb-3">
+            <Container fluid className="border-top border-bottom border-black pt-3 pb-5">
                 <Row>
                     <Col xs={12} sm={12} md={4} lg={4} xl={4} className="align-self-center">
                         <figure>

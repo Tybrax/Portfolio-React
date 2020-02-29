@@ -49,7 +49,7 @@ const WebProgramming = (props) => {
     return (
         <div>
             <Container>
-                <h5 style={{color: '#343A40'}} className="showcase-title text-center font-weight-bold pb-3">{props.projectName.toUpperCase()}</h5>
+                <h5 style={{color: '#00A651'}} className="showcase-title text-center font-weight-bold pb-3">{props.projectName.toUpperCase()}</h5>
                 <Carousel className="slider d-block mx-auto" style={{backgroundColor: '#17A2b8'}}>
                     <Carousel.Item>
                         <img
@@ -92,7 +92,7 @@ const WebProgramming = (props) => {
 
 export const Showcase = (props) => {
     return(
-        <Container>
+        <Container className="pb-5">
             <WebProgramming
                 srcOne={projectsData.web.pOne.img[0]}
                 altOne={projectsData.web.pOne.altImg[0]}

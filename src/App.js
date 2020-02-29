@@ -8,7 +8,7 @@ import {
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 import { Contact } from './components/Contact.js';
 import { Header } from './components/Header.js';
@@ -45,6 +45,9 @@ function App() {
                 <Nav.Link><Link className="nav-link" style={{colorFour}} to="/contact">CONTACT</Link></Nav.Link>
             </Nav>
         </Navbar>
+        <Container fluid className="spacing">
+
+        </Container>
         <Switch>
           <Route exact path="/">
             <Header />

@@ -171,7 +171,6 @@ const Experience = (props) => {
         <Container className="mt-5">
             <Accordion className="mt-5 mb-3">
                 <Card className="shadow-lg mt-5">
-                    <h3 className="text-center font-weight-bold" style={{color: '#00A651'}}>RESUME</h3>
                     <Card.Header className="text-center">
                         <Accordion.Toggle as={Button} variant="link" eventKey="0" className="dropdown-btn stretched-link mt-3" onMouseOver={() => newColor('text-info')} onMouseOut={() => newColor('text-dark')}>
                             <h4 className={titleColor}>PROFESSIONAL EXPERIENCE</h4>
@@ -193,6 +192,7 @@ const Experience = (props) => {
 export const Resume = (props) => {
     return (
         <div className="resume">
+            <h5 className="text-center font-weight-bold" style={{color: '#00A651'}}>RESUME</h5>
             <Experience />
             <Education />
             <Skills />

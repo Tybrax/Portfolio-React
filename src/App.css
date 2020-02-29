@@ -30,20 +30,9 @@
     height: 50%;
 }
 
-.main-title {
-    margin-top: 50px;
-}
-
-.showcase-title {
-    margin-top: 80px;
-}
-
-.resume {
-    margin-top: 150px;
-}
-
 .contact-header {
     margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 .contact-form {
@@ -74,3 +63,8 @@
         font-size: 0.8em;
     }
 }
+
+.spacing {
+    height: 100px;
+}
+
