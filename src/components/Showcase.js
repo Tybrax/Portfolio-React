@@ -1,17 +1,15 @@
+/*import statements*/
 import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-
-// Import images
-// Web development - Project 1
+/*import images for carousel*/
 import pOneImgOne from './slider/p1_1.JPG';
 import pOneImgTwo from './slider/p1_2.JPG';
 import pOneImgThree from './slider/p1_3.JPG';
-
-//  Web development - Project 2
 import pTwoImgOne from './slider/p2_1.JPG';
 import pTwoImgTwo from './slider/p2_2.JPG';
 import pTwoImgThree from './slider/p2_3.JPG';
 
+/*data for the carousel*/
 const projectsData = {
     web: {
         pOne: {
@@ -45,6 +43,7 @@ const pTwoSkills = projectsData.web.pTwo.skills.map((skill) =>
     <li>{skill}</li>
 );
 
+/*components*/
 const WebProgramming = (props) => {
     return (
         <div>
@@ -122,7 +121,5 @@ export const Showcase = (props) => {
                 skills={pTwoSkills}
             />
         </Container>
-
-
     );
 };

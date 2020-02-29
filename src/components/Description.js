@@ -1,9 +1,12 @@
+/*import statement*/
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
+/*strings to display in the slider*/
 const developerSkills = ['passion', 'communication', 'curiosity', 'rigor', 'creativity'];
 
 export class Description extends React.Component {
+    /*component state*/
     constructor(props) {
         super(props);
         this.state = {
@@ -12,17 +15,20 @@ export class Description extends React.Component {
         };
     }
 
+    /*component have finished loading*/
     componentDidMount() {
         this.interval = setInterval(
             () => this.changeSlide(),
-            2000
+            1500
         );
     }
 
+    /*component will be removed from the DOM*/
     componentWillUnmount() {
         clearInterval(this.interval);
     }
 
+    /*change the state every 1.5 seconds*/
     changeSlide() {
         if (this.state.skill === developerSkills[0]) {
             this.setState({

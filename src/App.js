@@ -1,21 +1,23 @@
+/*Import React and useState hook*/
 import React, {useState} from 'react';
+/*Import React-router elements*/
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-
+/*Import a CSS stylesheet, BS4 and its elements*/
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-
+/*Import components*/
 import { Contact } from './components/Contact.js';
 import { Header } from './components/Header.js';
 import { Resume } from './components/Resume.js';
 import { Footer } from './components/Footer.js';
 import { Showcase } from './components/Showcase.js'
-
+/*Import logo*/
 import logoWhite from './images/logo_w.png';
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/*Navbar fixed on top with 4 tabs, no toggle button*/}
         <Navbar bg="dark" variant="dark" fixed="top" className="nabvar">
             <Navbar.Brand>
                 <img
@@ -45,9 +48,10 @@ function App() {
                 <Nav.Link><Link className="nav-link" style={{colorFour}} to="/contact">CONTACT</Link></Nav.Link>
             </Nav>
         </Navbar>
+        {/*spacing to avoid navbar overlaying other components*/}
         <Container fluid className="spacing">
-
         </Container>
+        {/*Switch to render URL*/}
         <Switch>
           <Route exact path="/">
             <Header />

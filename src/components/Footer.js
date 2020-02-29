@@ -1,4 +1,4 @@
-// IMPORT
+/*import statements*/
 import React, {useState} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -6,7 +6,7 @@ import githubLogo from '../images/github.png';
 import linkedinLogo from '../images/linkedin.png';
 
 export const Footer = (props) => {
-
+    /*component state will change after onMouseOver and onMouseOut are triggered*/
     const [classOne, newclassOne] = useState('center-block');
     const [classTwo, newclassTwo] = useState('center-block');
 

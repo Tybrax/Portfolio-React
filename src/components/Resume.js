@@ -1,8 +1,8 @@
-// IMPORT
+/*import statements*/
 import React, { useState } from 'react';
 import { Accordion, Card, Button, Container, Row, Col, ProgressBar } from 'react-bootstrap';
 
-// VARIABLES
+/*declare variables*/
 const eduData = {
         openclassrooms: ['OpenClassrooms', 'Bachelor of Web development', '01/2020 - 01/2021', ['front end', 'back end', 'performance optimization', 'project documentation']],
         lewagon: ['Le Wagon', 'Data Analytics with Python', '11/2019 - 12/2019', ['data sourcing', 'data cleaning', 'data visualization', 'version control']],
@@ -52,7 +52,7 @@ const skills = {
     languages: ['French : native', 'English : full (TOEIC 935/990)', 'Chinese : full (HSK5)', 'Spanish : intermediate']
 };
 
-// COMPONENTS
+/*declare components*/
 const Jobs = (props) => {
     return (
         <div>
