@@ -1,6 +1,6 @@
 /*import statements*/
 import React from 'react';
-import { Form, Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Form, Container, Row, Col, Button, Card, Popover, OverlayTrigger } from 'react-bootstrap';
 /*import the Octicon library for using icons in React */
 import Octicon, { Mail, DeviceMobile } from '@primer/octicons-react';
 /*import image*/
@@ -9,7 +9,19 @@ import bastienImage from '../images/bastien.jpg';
 const contactInfo = {
     email: 'bastien.ratat@gmail.com',
     phone: '07 84 94 53 55'
-}
+};
+
+const submitMessage = (
+  <Popover id="popover-basic">
+    <Popover.Title>
+        <h3 className="text-center">Form submitted</h3>
+    </Popover.Title>
+    <Popover.Content>
+        <p className="text-justify">I already received your message and will answer you as soon as possible</p>
+        <h5 className=" text-center font-weight-bold" style={{color: '#17A2b8'}}>Bastien RATAT</h5>
+    </Popover.Content>
+  </Popover>
+);
 
 
 
@@ -75,7 +87,9 @@ const ContactForm = (props) => {
                                     <Form.Label style={{color: '#17A2b8'}} className="font-weight-bold">Your message</Form.Label>
                                     <Form.Control as="textarea" rows="3" />
                                 </Form.Group>
-                                <Button className= "mx-auto d-block" variant="dark">Submit</Button>
+                                <OverlayTrigger variant="dark" trigger="click" placement="below" overlay={submitMessage}>
+                                    <Button className= "mx-auto d-block" variant="dark">Submit</Button>
+                                </OverlayTrigger>
                             </Form>
                         </Card.Body>
                     </Card>
