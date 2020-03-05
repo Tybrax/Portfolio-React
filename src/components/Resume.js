@@ -1,6 +1,8 @@
 /*import statements*/
 import React, { useState } from 'react';
+import { Picture} from './Picture.js';
 import { Accordion, Card, Button, Container, Row, Col, ProgressBar } from 'react-bootstrap';
+import resumeImg from '../images/resume.jpg';
 
 /*declare variables*/
 const eduData = {
@@ -54,9 +56,6 @@ const skills = {
 
 /*declare components*/
 
-const Picture = () => {
-
-};
 
 const Jobs = (props) => {
     return (
@@ -197,7 +196,8 @@ const Experience = (props) => {
 export const Resume = (props) => {
     return (
         <div className="resume">
-            <h5 className="text-center font-weight-bold" style={{color: '#00A651'}}>RESUME</h5>
+            <Picture picture={resumeImg} title="resume" />
+            {/*<h5 className="text-center font-weight-bold" style={{color: '#00A651'}}>RESUME</h5>*/}
             <Experience />
             <Education />
             <Skills />

@@ -1,5 +1,5 @@
 /*Import React and useState hook*/
-import React, {useState} from 'react';
+import React from 'react';
 /*Import React-router elements*/
 import {
   BrowserRouter as Router,
@@ -9,7 +9,7 @@ import {
 /*Import a CSS stylesheet, BS4 and its elements*/
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 /*Import components*/
 import { NavBar } from './components/NavBar.js';
 import { Header } from './components/Header.js';

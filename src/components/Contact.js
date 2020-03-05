@@ -1,5 +1,6 @@
 /*import statements*/
 import React from 'react';
+import { Picture } from './Picture.js';
 import { Form, Container, Row, Col, Button, Card, Popover, OverlayTrigger } from 'react-bootstrap';
 /*import the Octicon library for using icons in React */
 import Octicon, { Mail, DeviceMobile } from '@primer/octicons-react';
@@ -23,7 +24,7 @@ const submitMessage = (
   </Popover>
 );
 
-const Picture = (props) => {
+/*const Picture = (props) => {
     return (
         <Container>
             <Row className="justify-content-center">
@@ -33,14 +34,14 @@ const Picture = (props) => {
                             <Card.Title>
                                 <h5 className="font-weight-bold text-center" style={{color: '#00A651'}}>Bastien RATAT</h5>
                             </Card.Title>
-                            <Card.Img variant="top" src={props.picture} />
+                            <Card.Img variant="top" src={props.picture} className="border rounded"/>
                         </Card.Body>
                     </Card>
                 </Col>
             </Row>
         </Container>
     )
-};
+};*/
 
 const Email = (props) => {
     return (
@@ -106,7 +107,7 @@ const ContactForm = (props) => {
 export const Contact = (props) => {
     return (
         <div>
-            <Picture picture={bastienImage} />
+            <Picture picture={bastienImage} title="bastien ratat" />
             <p className="contact-headline text-center font-italic font-weight-bold" style={{color: '#17A2b8'}}>Got a question? Send me a message and I'll answer as soon as possible.</p>
             <Email mail={contactInfo.email} />
             <Phone phone={contactInfo.phone} />
