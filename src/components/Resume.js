@@ -53,6 +53,11 @@ const skills = {
 };
 
 /*declare components*/
+
+const Picture = () => {
+
+};
+
 const Jobs = (props) => {
     return (
         <div>

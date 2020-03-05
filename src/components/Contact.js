@@ -23,8 +23,6 @@ const submitMessage = (
   </Popover>
 );
 
-
-
 const Picture = (props) => {
     return (
         <Container>
@@ -70,6 +68,14 @@ const Phone = (props) => {
     );
 }
 
+const ButtonOverlay = (props) => {
+    return (
+        <OverlayTrigger variant="dark" trigger="click" placement="below" overlay={submitMessage}>
+            <Button className= "mx-auto d-block" variant="dark">Submit</Button>
+        </OverlayTrigger>
+    )
+};
+
 const ContactForm = (props) => {
     return (
         <div className="pb-5">
@@ -87,9 +93,7 @@ const ContactForm = (props) => {
                                     <Form.Label style={{color: '#17A2b8'}} className="font-weight-bold">Your message</Form.Label>
                                     <Form.Control as="textarea" rows="3" />
                                 </Form.Group>
-                                <OverlayTrigger variant="dark" trigger="click" placement="below" overlay={submitMessage}>
-                                    <Button className= "mx-auto d-block" variant="dark">Submit</Button>
-                                </OverlayTrigger>
+                                <ButtonOverlay />
                             </Form>
                         </Card.Body>
                     </Card>
