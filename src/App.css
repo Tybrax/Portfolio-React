@@ -72,3 +72,7 @@
     margin-right: 5%;
     margin-left: 5%;
 }
+
+a.nav-link {
+    font-size: 1.5em;
+}

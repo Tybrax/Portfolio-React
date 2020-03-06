@@ -80,7 +80,7 @@ const WebProgramming = (props) => {
                         <p className="text-justify">{props.specs}</p>
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <h6 className="text-center font-weight-bold" style={{color: '#00A651'}}>TECHNICAL SKILLS</h6>
+                        <h6 className="text-center font-weight-bold" style={{color: '#17A2b8'}}>TECHNICAL SKILLS</h6>
                         <ul className="font-italic">{props.skills}</ul>
                     </Col>
                 </Row>

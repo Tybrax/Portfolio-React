@@ -19,13 +19,13 @@ import { Contact } from './components/Contact.js';
 import { Footer } from './components/Footer.js';
 
 /*Import logo*/
-import logoWhite from './images/logo_w.png';
+import logoBlack from './images/logo_b.png';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar logo={logoWhite}/>
+        <NavBar logo={logoBlack}/>
         {/*Navbar fixed on top with 4 tabs, no toggle button*/}
         {/*spacing to avoid navbar overlaying other components*/}
         <Container fluid className="spacing">
