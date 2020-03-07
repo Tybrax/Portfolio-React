@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Picture} from './Picture.js';
 import { Accordion, Card, Button, Container, Row, Col, ProgressBar } from 'react-bootstrap';
+import { ResumeTitle, ResumeSubTitle, ResumeList, LanguageList} from './Styled';
 import resumeImg from '../images/resume.jpg';
 
 /*declare variables*/
@@ -12,20 +13,28 @@ const eduData = {
         bellevue: ['Assomption Bellevue', 'Two-year Technical Degree in International Business', '09/2012 - 07/2014', ['international business', 'project management', 'law']]
     };
 
-const openCourses = eduData.openclassrooms[3].map((course) =>
-    <li>{course}</li>
+const openCourses = eduData.openclassrooms[3].map((course, index) =>
+    <li key={index}>
+        {course}
+    </li>
 );
 
-const lewagonCourses = eduData.lewagon[3].map((course) =>
-    <li>{course}</li>
+const lewagonCourses = eduData.lewagon[3].map((course, index) =>
+    <li key={index}>
+        {course}
+    </li>
 );
 
-const isegCourses = eduData.iseg[3].map((course) =>
-    <li>{course}</li>
+const isegCourses = eduData.iseg[3].map((course, index) =>
+    <li key={index}>
+        {course}
+    </li>
 );
 
-const bellevueCourses = eduData.bellevue[3].map((course) =>
-    <li>{course}</li>
+const bellevueCourses = eduData.bellevue[3].map((course, index) =>
+    <li key={index}>
+        {course}
+    </li>
 );
 
 const jobExperience = {
@@ -35,12 +44,16 @@ const jobExperience = {
             ['Mango Education', 'Co-founder', '05/2017 - 01/2018', ["Administrative procedures with the People's Republic of China authorities", 'Budget management, accounting and local taxation', 'Customer relationship management']]
     };
 
-const consulateTasks = jobExperience.consulate[3].map((task) =>
-    <li>{task}</li>
+const consulateTasks = jobExperience.consulate[3].map((task, index) =>
+    <li key={index}>
+        {task}
+    </li>
 );
 
-const mangoTasks = jobExperience.mango[3].map((task) =>
-    <li>{task}</li>
+const mangoTasks = jobExperience.mango[3].map((task, index) =>
+    <li key={index}>
+        {task}
+    </li>
 );
 
 const skills = {
@@ -55,14 +68,12 @@ const skills = {
 };
 
 /*declare components*/
-
-
 const Jobs = (props) => {
     return (
         <div>
-            <h5 className="font-weight-bold" style={{color: '#00A651'}}>{props.company}</h5>
-            <h6 className="font-italic" style={{color: '#17A2b8'}}>{props.date} : {props.title}</h6>
-            <ul className="text-dark">{props.courses}</ul>
+            <ResumeTitle>{props.company}</ResumeTitle>
+            <ResumeSubTitle>{props.date} : {props.title}</ResumeSubTitle>
+            <ResumeList>{props.courses}</ResumeList>
         </div>
     )
 }
@@ -70,9 +81,9 @@ const Jobs = (props) => {
 const Schools = (props) => {
     return (
         <div>
-            <h5 className="font-weight-bold" style={{color: '#00A651'}}>{props.school}</h5>
-            <h6 className="font-italic" style={{color: '#17A2b8'}}>{props.date} : {props.diploma}</h6>
-            <ul className="text-dark">{props.courses}</ul>
+            <ResumeTitle>{props.school}</ResumeTitle>
+            <ResumeSubTitle>{props.date} : {props.diploma}</ResumeSubTitle>
+            <ResumeList>{props.courses}</ResumeList>
         </div>
     );
 }
@@ -80,14 +91,14 @@ const Schools = (props) => {
 const It = (props) => {
     return (
         <div>
-            <h5 className="font-weight-bold" style={{color: '#00A651'}}>Computer Sciences</h5>
-            <ul className="text-dark">
+            <ResumeTitle>Computer Sciences</ResumeTitle>
+            <ResumeList>
                 <li>{skills.it.webDev}</li>
                 <li>{skills.it.dataSciences}</li>
                 <li>{skills.it.codeManagement}</li>
                 <li>{skills.it.microsoft}</li>
                 <li>{skills.it.design}</li>
-            </ul>
+            </ResumeList>
         </div>
     );
 }
@@ -95,14 +106,13 @@ const It = (props) => {
 const Languages = (props) => {
     return (
         <div>
-            <h5 className="font-weight-bold" style={{color: '#00A651'}}>Languages</h5>
-            <ul className="text-dark">
-
+            <ResumeTitle>Languages</ResumeTitle>
+            <LanguageList>
                 <li className="mt-2 mb-2">French<ProgressBar variant='dark' now={100} /></li>
                 <li className="mt-2 mb-2">English (TOEIC 935/990)<ProgressBar variant='dark' now={90} /></li>
                 <li className="mt-2 mb-2">Chinese (HSK5)<ProgressBar variant='dark' now={90} /></li>
                 <li className="mt-2 mb-2">Spanish<ProgressBar variant='dark' now={40} /></li>
-            </ul>
+            </LanguageList>
         </div>
     );
 };
@@ -197,7 +207,6 @@ export const Resume = (props) => {
     return (
         <div className="resume">
             <Picture picture={resumeImg} title="resume" />
-            {/*<h5 className="text-center font-weight-bold" style={{color: '#00A651'}}>RESUME</h5>*/}
             <Experience />
             <Education />
             <Skills />

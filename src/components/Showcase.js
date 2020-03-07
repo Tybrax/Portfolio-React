@@ -1,6 +1,7 @@
 /*import statements*/
 import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import { Title } from './Styled';
 /*import images for carousel*/
 import pOneImgOne from './slider/p1_1.JPG';
 import pOneImgTwo from './slider/p1_2.JPG';
@@ -35,12 +36,16 @@ const projectsData = {
     }
 };
 
-const pOneSkills = projectsData.web.pOne.skills.map((skill) =>
-    <li>{skill}</li>
+const pOneSkills = projectsData.web.pOne.skills.map((skill, index) =>
+    <li key={index}>
+        {skill}
+    </li>
 );
 
-const pTwoSkills = projectsData.web.pTwo.skills.map((skill) =>
-    <li>{skill}</li>
+const pTwoSkills = projectsData.web.pTwo.skills.map((skill, index) =>
+    <li key={index}>
+        {skill}
+    </li>
 );
 
 /*components*/
@@ -48,7 +53,7 @@ const WebProgramming = (props) => {
     return (
         <div>
             <Container>
-                <h5 style={{color: '#00A651'}} className="showcase-title text-center font-weight-bold pb-3">{props.projectName.toUpperCase()}</h5>
+                <Title>{props.projectName}</Title>
                 <Carousel className="slider d-block mx-auto" style={{backgroundColor: '#17A2b8'}}>
                     <Carousel.Item>
                         <img

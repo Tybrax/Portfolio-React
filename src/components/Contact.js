@@ -1,11 +1,12 @@
 /*import statements*/
 import React from 'react';
 import { Picture } from './Picture.js';
-import { Form, Container, Row, Col, Button, Card, Popover, OverlayTrigger } from 'react-bootstrap';
+import { Form, Container, Row, Col, Card, Popover, OverlayTrigger } from 'react-bootstrap';
 /*import the Octicon library for using icons in React */
 import Octicon, { Mail, DeviceMobile } from '@primer/octicons-react';
 /*import image*/
 import bastienImage from '../images/bastien.jpg';
+import { Button, Title } from './Styled.js';
 
 const contactInfo = {
     email: 'bastien.ratat@gmail.com',
@@ -19,29 +20,10 @@ const submitMessage = (
     </Popover.Title>
     <Popover.Content>
         <p className="text-justify">I already received your message and will answer you as soon as possible</p>
-        <h5 className=" text-center font-weight-bold" style={{color: '#17A2b8'}}>Bastien RATAT</h5>
+        <Title>Bastien RATAT</Title>
     </Popover.Content>
   </Popover>
 );
-
-/*const Picture = (props) => {
-    return (
-        <Container>
-            <Row className="justify-content-center">
-                <Col className="d-block mx-auto">
-                    <Card style={{ width: '18rem' }} className="shadow-lg d-block mx-auto mb-3">
-                        <Card.Body>
-                            <Card.Title>
-                                <h5 className="font-weight-bold text-center" style={{color: '#00A651'}}>Bastien RATAT</h5>
-                            </Card.Title>
-                            <Card.Img variant="top" src={props.picture} className="border rounded"/>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
-    )
-};*/
 
 const Email = (props) => {
     return (
@@ -71,8 +53,8 @@ const Phone = (props) => {
 
 const ButtonOverlay = (props) => {
     return (
-        <OverlayTrigger variant="dark" trigger="click" placement="below" overlay={submitMessage}>
-            <Button className= "mx-auto d-block" variant="dark">Submit</Button>
+        <OverlayTrigger variant="dark" trigger="click" placement="bottom" overlay={submitMessage}>
+            <Button className= "mx-auto d-block">Submit</Button>
         </OverlayTrigger>
     )
 };
@@ -80,7 +62,7 @@ const ButtonOverlay = (props) => {
 const ContactForm = (props) => {
     return (
         <div className="pb-5">
-            <h5 className="text-center font-weight-bold" style={{color: '#00A651'}}>Or contact me using the form below</h5>
+            <Title textDowncase="lowercase">Or contact me using the form below</Title>
             <Row>
                 <Col className="justify-content-center">
                     <Card className="shadow-lg d-block mx-auto mb-3">
