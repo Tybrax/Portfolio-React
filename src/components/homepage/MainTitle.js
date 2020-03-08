@@ -1,7 +1,7 @@
 /*import statements*/
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { Title } from './Styled.js';
+import { Title } from '../styledComponent/Styled.js';
 
 export const MainTitle = (props) => {
     return (

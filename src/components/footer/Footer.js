@@ -2,8 +2,9 @@
 import React, {useState} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import githubLogo from '../images/github.png';
-import linkedinLogo from '../images/linkedin.png';
+/*import images*/
+import githubLogo from '../../images/github.png';
+import linkedinLogo from '../../images/linkedin.png';
 
 export const Footer = (props) => {
     /*component state will change after onMouseOver and onMouseOut are triggered*/

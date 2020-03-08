@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Title } from '../styledComponent/Styled.js';
 
-export const Picture = (props) => {
+export const ComponentTitle = (props) => {
     return (
         <Container>
             <Row className="justify-content-center">
@@ -9,7 +10,7 @@ export const Picture = (props) => {
                     <Card style={{ width: '18rem' }} className="shadow-lg d-block mx-auto mb-3">
                         <Card.Body>
                             <Card.Title>
-                                <h5 className="font-weight-bold text-center" style={{color: '#00A651'}}>{props.title.toUpperCase()}</h5>
+                                <Title>{props.title}</Title>
                             </Card.Title>
                             <Card.Img variant="top" src={props.picture} className="border rounded"/>
                         </Card.Body>
@@ -19,4 +20,3 @@ export const Picture = (props) => {
         </Container>
     )
 };
-
