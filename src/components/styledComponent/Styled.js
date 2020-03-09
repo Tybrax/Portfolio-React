@@ -43,3 +43,10 @@ export const ResumeList = styled.ul `
 export const LanguageList = styled.ol `
     color: #343A40;
 `;
+
+export const Rectangle = styled.div`
+    background: linear-gradient(180deg, #17A2B8 0%, rgba(0, 166, 81, 0.928418) 100%);
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 35px;
+    color: white;
+`
