@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 /*Button styled component*/
 export const Button = styled.button`
     background: transparent;
@@ -20,7 +21,8 @@ export const Title = styled.h5 `
     text-transform: ${props => props.textDowncase || "uppercase"};;
     font-weight: bold;
     padding-bottom: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-family: 'DM Serif Display', serif;
 `;
 
 /*Resume elements*/
@@ -28,16 +30,21 @@ export const ResumeTitle = styled.h5 `
     font-weight: bold;
     color: #00A651;
     text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: 'DM Serif Display', serif;
 `;
 
 export const ResumeSubTitle = styled.h6 `
-    font-style: italic;
+    font-weight: bold;
     color: #17A2b8;
+    letter-spacing: 2px;
+    font-family: 'DM Serif Display', serif;
 `;
 
 export const ResumeList = styled.ul `
     color: #343A40;
     list-style-type: square;
+    font-family: 'Source Sans Pro', sans-serif;
 `;
 
 export const LanguageList = styled.ol `
