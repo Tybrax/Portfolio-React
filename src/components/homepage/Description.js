@@ -2,6 +2,13 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
+/*css for the card title*/
+const titleStyle = {
+    color: '#17A2b8',
+    fontFamily: 'DM Serif Display, serif',
+    letterSpacing: '2px'
+}
+
 /*strings to display in the slider*/
 const developerSkills = ['passion', 'communication', 'curiosity', 'rigor', 'creativity'];
 
@@ -69,7 +76,7 @@ export class Description extends React.Component {
                     </Col>
                     <Col xs={12} sm={12} md={8} lg={8} xl={8}>
                         <Card className="border rounded-lg shadow">
-                        <Card.Title style={{color: this.props.headline}} className="mt-2 ml-2 pt-2 text-center font-weight-bold">SEEKING FULL-TIME WEB DEVELOPER JOB</Card.Title>
+                        <Card.Title style={titleStyle} className="mt-2 ml-2 pt-2 text-center font-weight-bold">SEEKING FULL-TIME WEB DEVELOPER JOB</Card.Title>
                             <Card.Body>
                                 <blockquote className="blockquote mb-0">
                                     <p>

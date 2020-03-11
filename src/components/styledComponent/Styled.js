@@ -25,6 +25,16 @@ export const Title = styled.h5 `
     font-family: 'DM Serif Display', serif;
 `;
 
+/*Main title*/
+export const mainTitleCompo = styled.h1 `
+    text-align: center;
+    text-transform: uppercase";
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2em;
+`
+
 /*Resume elements*/
 export const ResumeTitle = styled.h5 `
     font-weight: bold;
