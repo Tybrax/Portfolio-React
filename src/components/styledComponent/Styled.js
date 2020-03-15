@@ -26,7 +26,7 @@ export const Title = styled.h5 `
 `;
 
 /*Main title*/
-export const mainTitleCompo = styled.h1 `
+export const MainTitleCompo = styled.h1 `
     text-align: center;
     text-transform: uppercase";
     font-weight: bold;
